@@ -1,0 +1,218 @@
+*{
+    box-sizing: border-box;
+    font-family: "Roboto";
+    margin: 0;
+    padding: 5px;
+}
+
+body{
+    background-color: rgb(231, 222, 222);
+}
+
+::-webkit-scrollbar{
+    display: none;
+    scroll-behavior: smooth;
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+    max-width: 100%;
+    color: azure;
+    background-color: rgb(32, 113, 194);
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.3),inset 5px 5px 10px rgba(34, 33, 33, 0.699);
+}
+
+@media (min-width:900px) {
+    header{
+        justify-content: space-between;
+    }
+}
+
+.link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.date > p {
+    display: flex;
+    align-items: center;
+}
+
+.location,.date{
+    cursor: pointer;
+}
+
+.location > h2 {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.loader {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    background:linear-gradient(90deg,#000 50%,#0000 0) right/200% 100%;
+    animation: l21 2s infinite linear;
+}
+.loader::before {
+    content :"Fetching location...";
+    color: #0000;
+    padding: 0 5px;
+    background: inherit;
+    background-image: linear-gradient(90deg,#fff 50%,#000 0);
+    -webkit-background-clip:text;
+            background-clip:text;
+}
+
+@keyframes l21{
+100%{background-position: left}
+}
+
+.weather-data{
+    display: flex;
+    width: 100%;
+    color: azure;
+    background: linear-gradient(170deg, rgb(32, 113, 194), #E1341E);;
+    margin-top: 10px;
+}
+
+.WD-details{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.WD-details > h2{
+    color: black;
+}
+
+.city-click{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.float-label {
+    position: relative;
+    margin-bottom: 20px;
+}
+  
+.float-label label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-45px);
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    color: black;
+    font-size: 16px;
+}
+  
+.float-label input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(32, 113, 194);
+    border-radius: 10px;
+}
+  
+.float-label input:focus + label,
+.float-label input:not(:placeholder-shown) + label {
+    top: 20px;
+    font-size: 14px;
+    color: #3498db;
+}
+
+
+.weather-temp{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    border: none;
+    box-shadow: 5px 5px 10px 0 rgb(32, 113, 194),inset 5px 5px 10px #E1341E;
+}
+
+.temparture, .feels-like{
+    display: flex;
+    width: 90%;
+    font-size: 40px;
+    font-weight: 800;
+    object-fit: contain;
+}
+
+.temparture > span, .feels-like > span {
+    font-size: 14px;
+}
+
+.weather-type{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    border: none;
+    box-shadow: 5px 5px 10px 0 rgb(32, 113, 194),inset 5px 5px 10px #E1341E;
+}
+
+
+
+.weather-type > div > p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.con{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.con-main{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: #fff;
+    color: #000;
+    border: none;
+    box-shadow: 5px 5px 10px 0 rgb(32, 113, 194),inset 5px 5px 10px #E1341E;
+
+}
+
+.con-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.con-div >p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+
+footer{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #E1341E;
+    padding: 15px;
+}
+
+
